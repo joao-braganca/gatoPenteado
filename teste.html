@@ -1,0 +1,56 @@
+<DOCTYPE html>
+
+	<html>
+
+	<head>
+		<style>
+			html,
+			body {
+				height: 99vh;
+				width: 99vw;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				cursor: none;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<img id="mouse" style="position: absolute; background-color: #ff0000; height: 50px; width: 50px; z-index: 1;">
+		<div>
+			<h1>pontos <span id="pontos">0</span></h1>
+			<img id="gato" onmousemove="mouses()"
+				style="position: absolute; height: 100px; width: 100px; background-color: #00ff00;">
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		var pontos = 0;
+		var bloqueio = false;
+		var pontoApresentado = 0;
+		function mouses() {
+			pontos++;
+			if (!bloqueio) {
+				if (pontos % 100 == 0) {
+					pontoApresentado++;
+					document.getElementById("pontos").textContent = pontoApresentado;
+				}
+			}
+		}
+
+
+
+
+
+		// mouse
+		document.addEventListener("mousemove", (e) => {
+			document.getElementById("mouse").style.top = e.clientY;
+			document.getElementById("mouse").style.left = e.clientX;
+		});
+
+
+	</script>
+
+	</html>

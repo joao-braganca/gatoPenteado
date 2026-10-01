@@ -1,0 +1,39 @@
+html,
+body {
+    height: 99vh;
+    width: 99vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: none;
+}
+
+#mouse {
+    position: absolute;
+    background-color: #ff0000;
+    height: 50px;
+    width: 50px;
+    z-index: 2;
+}
+
+#gato {
+    height: 400px;
+    width: 400px;
+    z-index: 0;
+}
+#gatocabeca{
+    height: 200px;
+    width: 200px;
+    z-index: 1;
+    position: absolute;
+    top: 70px;
+    left: 550px;
+    visibility: hidden;
+
+}
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

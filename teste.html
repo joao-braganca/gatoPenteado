@@ -9,39 +9,16 @@
 	</head>
 
 	<body>
-		<img id="mouse">
+		<img id="mouse" src="/img/pente.svg">
 		<div>
 			<h1>pontos <span id="pontos">0</span></h1>
 			<img id="gato" onmousemove="mouse()" src="img/gatocerto.png">
 			<img id="gatocabeca" src="/img/gatocabeca.png">
+			<img id="perdeu" src="/img/perdeu.png">
+
 		</div>
 	</body>
 
-	<script type="text/javascript">
-		var pontos = 0;
-		var bloqueio = false;
-		var pontoApresentado = 0;
-		function mouse() {
-			pontos++;
-			if (!bloqueio) {
-				if (pontos % 50 == 0) {
-					pontoApresentado++;
-					document.getElementById("pontos").textContent = pontoApresentado;
-				}
-			}
-		}
-
-
-
-
-
-		// mouse
-		document.addEventListener("mousemove", (e) => {
-			document.getElementById("mouse").style.top = e.clientY + "px";
-			document.getElementById("mouse").style.left = e.clientX + "px";
-		});
-
-
-	</script>
+	<script type="text/javascript" src="script.js"></script>
 
 	</html>

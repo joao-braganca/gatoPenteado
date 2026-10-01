@@ -1,3 +1,14 @@
+@keyframes perder{
+    0%{
+        width: 0px;
+        height: 0px;
+    }
+    100%{
+        width: 1000px;
+        height: 1000px;
+    }
+}
+
 html,
 body {
     height: 99vh;
@@ -10,9 +21,8 @@ body {
 
 #mouse {
     position: absolute;
-    background-color: #ff0000;
-    height: 50px;
-    width: 50px;
+    height: 200px;
+    width: 200px;
     z-index: 2;
 }
 
@@ -36,4 +46,11 @@ div{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+#perdeu{
+    position: absolute;
+    z-index: 4;
+    visibility: hidden;
+
 }
